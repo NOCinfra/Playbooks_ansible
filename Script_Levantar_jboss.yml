@@ -9,4 +9,4 @@
 
     - name: Ejecutar script BAT en Desktop
       ansible.windows.win_shell: |
-        C:\Users\{{ ansible_user }}\Desktop\mi_script.bat
+        C:\NOC\NOC_SCRIPTS\ScriptLog.bat
