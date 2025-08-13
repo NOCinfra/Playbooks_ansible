@@ -1,0 +1,8 @@
+---
+- name: Playbook Ping-Pong
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Hacer ping a los hosts
+      ansible.builtin.ping:
