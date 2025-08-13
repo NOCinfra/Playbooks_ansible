@@ -1,8 +1,12 @@
 ---
-- name: Playbook Ping-Pong
+- name: Playbook Ping-Pong para Windows
   hosts: all
   gather_facts: no
 
   tasks:
-    - name: Hacer ping a los hosts
-      ansible.builtin.ping:
+    - name: Hacer ping a los hosts Windows
+      ansible.windows.win_ping:
+
+    - name: Mostrar mensaje de éxito
+      ansible.builtin.debug:
+        msg: "Conexión WinRM exitosa a {{ inventory_hostname }}"
