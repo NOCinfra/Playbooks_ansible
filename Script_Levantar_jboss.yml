@@ -1,5 +1,5 @@
 ---
-- name: Ejecutar BAT en Windows
+- name: Ejecutar PowerShell en Windows
   hosts: all
   gather_facts: no
 
@@ -7,6 +7,7 @@
     - name: Hacer ping a los hosts Windows
       ansible.windows.win_ping:
 
-    - name: Ejecutar script BAT en Desktop
-      ansible.windows.win_shell: |
-        C:\NOC\NOC_SCRIPTS\ScriptLog.bat
+    - name: Ejecutar script PowerShell en Desktop
+      ansible.windows.win_powershell:
+        script: |
+          & "C:\NOC\NOC_SCRIPTS\ScriptLog.ps1"
